@@ -6,7 +6,7 @@ This project was made and tested in Python 3.9 & 3.10, so I'd advicing using the
 You can download [Python](https://www.python.org/downloads/) at their website.
 
 # Dependencies
-**py-cord**: discord api library
+**py-cord**: Discord api library
 
 **asyncpraw**: reddit post api
 
