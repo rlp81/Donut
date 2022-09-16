@@ -31,6 +31,11 @@ class Guilds(discord.Cog): # create a class for our cog that inherits from comma
                 chans[guild.id]["leave"] = 0
         with open("channels.json", "w") as f:
             json.dump(chans, f, indent=4)
+        with open("guilds.json", "r") as f:
+            guilds = json.load(f)
+        if not str(guild.id) in guilds:
+            guilds[guild.id] = {}
+            guilds[guild.id]["over18"] = "False"
     @commands.Cog.listener()
     async def on_guild_leave(self, guild):
         with open("channels.json", "r") as f:
