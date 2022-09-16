@@ -3,12 +3,12 @@ from quart_discord import DiscordOAuth2Session
 from discord.ext import ipc
 
 app = Quart(__name__)
-ipc_client = ipc.Client(secret_key = "amogus")
+ipc_client = ipc.Client(secret_key = SECRET_KEY)
 
-app.config["SECRET_KEY"] = "amogus"
-app.config["DISCORD_CLIENT_ID"] = "697886971418116106"
-app.config["DISCORD_CLIENT_SECRET"] = "gJHSwxk5Nvi3Thq6qcLCKuAgkA03xGGw"
-app.config["DISCORD_REDIRECT_URI"] = "http://127.0.0.1:5000/callback"
+app.config["SECRET_KEY"] = SECRET_KEY
+app.config["DISCORD_CLIENT_ID"] = DISCORD_CLIENT_ID
+app.config["DISCORD_CLIENT_SECRET"] = DISCORD_CLIENT_SECRET
+app.config["DISCORD_REDIRECT_URI"] = DISCORD_REDIRECT_URI
 
 discord = DiscordOAuth2Session(app)
 
