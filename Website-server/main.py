@@ -1,14 +1,16 @@
 from quart import Quart, render_template, request, session, redirect, url_for
 from quart_discord import DiscordOAuth2Session
 from discord.ext import ipc
+import configparser
+config = configparser.ConfigParser()
+confile = config.read("../config.conf")
 
 app = Quart(__name__)
-ipc_client = ipc.Client(secret_key = SECRET_KEY)
-
-app.config["SECRET_KEY"] = SECRET_KEY
-app.config["DISCORD_CLIENT_ID"] = DISCORD_CLIENT_ID
-app.config["DISCORD_CLIENT_SECRET"] = DISCORD_CLIENT_SECRET
-app.config["DISCORD_REDIRECT_URI"] = DISCORD_REDIRECT_URI
+ipc_client = ipc.Client(secret_key = config.get("webserver","discord_secret_key"))
+app.config["SECRET_KEY"] = config.get("webserver","discord_secret_key")
+app.config["DISCORD_CLIENT_ID"] = config.get("webserver","discord_client_id")
+app.config["DISCORD_CLIENT_SECRET"] = config.get("webserver","discord_client_secret")
+app.config["DISCORD_REDIRECT_URI"] = config.get("webserver","discord_redirect_uri")
 
 discord = DiscordOAuth2Session(app)
 
