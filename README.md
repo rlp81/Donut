@@ -7,4 +7,5 @@ You can download [Python](https://www.python.org/downloads/) at their website.
 
 # Dependencies
 **py-cord**: discord api library
+
 **asyncpraw**: reddit post api
