@@ -12,4 +12,4 @@ You can download [Python](https://www.python.org/downloads/) at their website.
 
 **quart**: ASGI website framework
 
-**quart_discord**: Discord OAuth2 for quart
+**quart_discord**: For Py-Cord; Quart-Discord-any[pycord]. Discord OAuth2 for quart
