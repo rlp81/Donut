@@ -12,4 +12,37 @@ You can download [Python](https://www.python.org/downloads/) at their website.
 
 **quart**: ASGI website framework
 
-**quart_discord**: For Py-Cord; Quart-Discord-any[pycord]. Discord OAuth2 for quart
+**quart_discord**: For Py-Cord; Discord OAuth2 for quart
+
+**discord-ext-ipc**: Discord client communicator
+
+# Installing Dependencies
+
+**py-cord**
+
+
+```{python} -m pip install py-cord```
+
+
+**asyncpraw**
+
+
+```{python} -m pip install asyncpraw```
+
+
+**quart**
+
+
+```{python} -m pip install quart```
+
+
+**quart_discord**
+
+
+```{python} -m pip install Quart-Discord-any[pycord]```
+
+
+**discord-ext-ipc**
+
+
+```{python} -m pip install git+https://github.com/fs86/discord-ext-ipc```
